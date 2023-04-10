@@ -1,0 +1,18 @@
+@tailwind base;
+
+#nav-toggle:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+#nav-toggle:active {
+    transform: translateX(-50%) scale(0.9);
+}
+
+body[data-nav="true"] #nav-toggle {
+    background-color: rgb(85, 130, 149);
+  }
+  
+  body:not([data-nav="true"]) #nav-toggle:hover i {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
