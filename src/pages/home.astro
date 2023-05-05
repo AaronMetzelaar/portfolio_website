@@ -1,30 +1,36 @@
 ---
-import ProjectPicture from "../components/ProjectPicture.astro";
-import PictureColumn from "../components/PictureColumn.astro";
+import PictureColumnLeft from "../components/PictureColumnLeft.astro";
+import PictureColumnRight from "../components/PictureColumnRight.astro";
+import Information from "../components/Information.astro";
 ---
-
 
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="h-screen w-screen m-0 bg-black">
-        <button id="nav-toggle" type="button" class="fixed z-30 bottom-20 left-1/2 -translate-x-1/2 center-0 w-20 h-20 bg-gray-300 rounded-full shadow-md cursor-pointer duration-500 ease"></button>
+        <button type="button" class="fixed z-30 bottom-20 left-1/2 -translate-x-1/2 center-0 w-20 h-20 bg-gray-300 rounded-full shadow-md cursor-pointer duration-500 ease"></button>
         <main class="bg-white h-screen w-screen relative z-20">
-            <div class="flex h-screen">
-                <div class="w-1/2 grid">
-                    <div class="bg-gray-100">
-                        <ProjectPicture image="https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s1100-c50.jpg" title="Test" href="#"/>
-                    </div>
-                    <div class="bg-gray-200"></div>
+            <div class="flex gap-x-[30px] h-screen">
+                <div id="project-wrapper" class="flex w-1/2 gap-x-[30px]">
+                    <PictureColumnLeft></PictureColumnLeft>
+                    <PictureColumnRight></PictureColumnRight>
                 </div>
-                <div class="flex flex-col justify-center align-middle w-1/2 px-20 bg-stone-100">
-                    <div class="flex flex-col h-1/2">
-                        <h1 class="text-8xl">Hi!<br>I'm Aaron<br>Metzelaar.</h1>
-                        <h2 class="text-5xl text-right mt-auto">I design and<br>code things.</h2>
-                    </div>
-                </div>
+                <Information></Information>
             </div>
         </main>
     </body>
 </html>
+
+<style>
+    #project-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    #project-wrapper {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
