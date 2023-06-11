@@ -1,6 +1,7 @@
 ---
-const {image, title, href} = Astro.props 
+const {image, title, desc, href} = Astro.props 
 ---
 <a class="relative" href={href}>
-    <img class="object-cover aspect-[3/4]" src={image} alt={title} />
+    <h3 class="absolute bottom-3 left-3 text-l text-[var(--whitetint)]">{title}</h3>
+    <img class="object-cover" src={image} alt={title} />
 </a>

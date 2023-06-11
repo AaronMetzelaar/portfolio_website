@@ -3,19 +3,26 @@ import Information from "../components/Information.astro";
 import PictureColumnLeft from "../components/PictureColumnLeft.astro";
 import PictureColumnRight from "../components/PictureColumnRight.astro";
 import { ProjectWrapper } from "../components/ProjectWrapper";
+import "../styles/GlobalStyle.css";
 ---
 
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body class="h-screen w-screen m-0 bg-black">
-        <button
-            type="button"
-            class="fixed z-30 bottom-20 left-1/2 -translate-x-1/2 center-0 w-20 h-20 bg-gray-300 rounded-full shadow-md cursor-pointer duration-500 ease"
-        ></button>
-        <main class="bg-white h-screen w-screen relative z-20">
-            <div class="flex gap-x-[30px] h-screen">
+    <body class="h-screen w-screen m-0">
+        <a
+            download="Aaron_Metzelaar_Resume.pdf"
+            href="src/resume/Aaron_Metzelaar_Resume.pdf"
+        >
+            <button
+                type="button"
+                id="nav-toggle"
+                class="nav-toggle fixed z-30 bottom-10 left-1/2 -translate-x-1/2 center-0 w-28 h-28 bg-[var(--accent)] rounded-full shadow-md cursor-pointer duration-500 ease"
+            >
+                <img src="src/images/resume_icon.png" class="w-20 m-auto" />
+            </button>
+        </a>
+
+        <main class="h-screen w-screen relative z-20 bg-[var(--whitetint)]">
+            <div class="flex gap-x-[40px] h-screen">
                 <ProjectWrapper client:load>
                     <PictureColumnLeft />
                     <PictureColumnRight />
@@ -34,5 +41,22 @@ import { ProjectWrapper } from "../components/ProjectWrapper";
     .project-wrapper {
         -ms-overflow-style: none;
         scrollbar-width: none;
+    }
+
+    .nav-toggle:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    .nav-toggle:active {
+        transform: translateX(-50%) scale(0.9);
+    }
+
+    body[data-nav="true"] .nav-toggle {
+        background-color: rgb(85, 130, 149);
+    }
+
+    body:not([data-nav="true"]) .nav-toggle:hover i {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
     }
 </style>

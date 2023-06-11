@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+
+:root {
+    --whitetint: #FFFFFF;
+    --text: #050505;
+    --primary: #121212;
+    --secondary: #d7cec7;
+    --accent: #C09F80;
+    --accent40: #C09F8040;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400 !important;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300 !important;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500 !important;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700 !important;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300 !important;
+}

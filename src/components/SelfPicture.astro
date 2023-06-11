@@ -1,0 +1,16 @@
+<script>
+    import $ from 'jquery';
+
+    $(window).scroll(function(){
+    $("#picture").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
+    });
+</script>
+  
+  <div id="picture" class="justify-self-end">
+    <img
+      src="src/images/aaron.png"
+      alt="Aaron Metzelaar"
+      class="grow basis-0 min-h-[600px] h-[600px] object-cover"
+    />
+  </div>
+  

@@ -46,7 +46,7 @@ export function ProjectWrapper(props: Props) {
     }, []);
 
     return (
-        <div ref={wrapperRef} className="project-wrapper flex w-1/2 gap-x-[30px] overflow-y-scroll overflow-x-hidden">
+        <div ref={wrapperRef} className="project-wrapper grid grid-cols-2 w-1/2 gap-x-[40px] overflow-y-scroll">
             {props.children}
         </div>
     )
