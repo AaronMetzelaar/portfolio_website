@@ -2,6 +2,7 @@
 import SelfPicture from "../components/SelfPicture.astro";
 import AboutText from "../components/AboutText.astro";
 import CloseButton from "../components/CloseButton.astro";
+import ContactForm from "../components/ContactForm.astro";
 import "../styles/GlobalStyle.css";
 ---
 
@@ -11,7 +12,10 @@ import "../styles/GlobalStyle.css";
             <div class="flex-shrink-0">
                 <SelfPicture />
             </div>
-            <AboutText />
+            <div class="mb-20">
+                <AboutText />
+                <ContactForm />
+            </div>
             <CloseButton class="mt-28" />
         </div>
     </body>

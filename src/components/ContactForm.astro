@@ -1,0 +1,37 @@
+<body class="bg-white">
+  <form
+    class="flex flex-col w-full bg-[var(--whitetint)] p-10"
+    action="src/pages/submit-form.php"
+    method="post"
+  >
+    <h1 class="text-[var(--primary)] text-2xl font-bold mb-4">
+      Contact me using this form!
+    </h1>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      placeholder="NAME"
+      class="bg-transparent outline-none text-gray-700 text-sm w-full h-12 px-4 border border-gray-300"
+    />
+    <input
+      id="email"
+      name="email"
+      type="text"
+      placeholder="E-MAIL"
+      class="bg-transparent outline-none text-gray-700 text-sm w-full h-12 px-4 mt-4 border border-gray-300"
+    />
+    <textarea
+      id="message"
+      name="message"
+      placeholder="MESSAGE"
+      class="bg-transparent outline-none text-gray-700 text-sm w-full h-36 px-4 mt-4 p-4 border border-gray-300"
+    ></textarea>
+    <input
+      id="submit"
+      type="submit"
+      value="SEND"
+      class="bg-transparent outline-none text-gray-700 text-sm w-full h-12 px-4 mt-4 border border-gray-300 transition duration-300 hover:text-white hover:bg-[var(--primary)] cursor-pointer"
+    />
+  </form>
+</body>
